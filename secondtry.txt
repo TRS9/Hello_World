@@ -1,0 +1,8 @@
+kunnr,
+aufpl,
+matnr,
+StorageLocation,
+erdat,
+\zpom\pomon,
+zpp07_old,
+saufe,n
