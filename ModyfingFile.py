@@ -1,15 +1,12 @@
-abap = open("firsttry.txt", "r+")
-#print(abap.readlines())
-abap2 = []
-i = 0
-for field in abap.readlines():
+file_input = open("firsttry.txt", "r+")
+file_input_copy = []
+for field in file_input.readlines():
     index = field.find("\n")
     comma_field = field[:index] + "," + field[index:]
-    abap2.append(comma_field)
+    file_input_copy.append(comma_field)
+file_input.close()
 
-abap.close()
-abap3 = open("secondtry.txt", "a")
-for field1 in abap2:
-    abap3.write(field1)
-abap3.close()
-print(abap2)
+file_output = open("secondtry.txt", "a")
+for field in file_input_copy:
+    file_output.write(field)
+file_output.close()
